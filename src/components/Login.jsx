@@ -11,29 +11,21 @@ const Login = () => {
         const [password,setPassword]= useState("Naveen@2025");
 
         const navigate =useNavigate();
-
         const dispatch= useDispatch();
 
-       
+        const [error,setError]=useState("")
+
         const handleLogin = async () => {
           try {
-            
-        
             const res = await axios.post(
               `${BASE_URL}/login`,
               { emailId, password }, // Payload
               { withCredentials: true } // Important for authentication
             );
-        
-            
-        
             dispatch(addUser(res.data));
             navigate("/"); 
           } catch (err) {
-            console.error(
-              "Login Error:",
-              err.response ? err.response.data : err.message
-            );
+            setError(err.response ? err.response.data : err.message)
           }
         };
         
@@ -72,6 +64,7 @@ const Login = () => {
                 className="input input-bordered w-full max-w-xs" />
               </label>
             </div>
+            <p className="font-semibold text-red-600">{error}</p>
             <div className="card-actions justify-center p-2">
               <button className="btn btn-primary text-white font-semibold text-sm"onClick={handleLogin}>Login</button>
             </div>
