@@ -14,21 +14,29 @@ const Login = () => {
 
         const dispatch= useDispatch();
 
-        const handleLogin = async()=>{
-
-          try{
-            const res =await axios.post(BASE_URL + "/login",{
-              emailId,
-              password
-            },{withCredentials:true})
-            console.log(res.data)
-            dispatch(addUser(res.data))
-            return navigate("/")
+       
+        const handleLogin = async () => {
+          try {
+            
+        
+            const res = await axios.post(
+              `${BASE_URL}/login`,
+              { emailId, password }, // Payload
+              { withCredentials: true } // Important for authentication
+            );
+        
+            
+        
+            dispatch(addUser(res.data));
+            navigate("/"); 
+          } catch (err) {
+            console.error(
+              "Login Error:",
+              err.response ? err.response.data : err.message
+            );
           }
-          catch(err){
-            err
-          }
-        }
+        };
+        
 
     return (
       <div className="flex justify-center my-10">
