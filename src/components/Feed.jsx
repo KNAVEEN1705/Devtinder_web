@@ -17,7 +17,6 @@ const fetchUser = async () => {
     const res = await axios.get(`${BASE_URL}/feed`, {
       withCredentials: true, 
     });
-    console.log(res.data)
     dispatch(addFeed(res.data));
   } catch (err) {
     if (err.response && err.response.status === 401) {

@@ -1,9 +1,9 @@
 import React from 'react'
 
 const UserCard = ({user}) => {
-    const{firstName,lastName,photoURL,about,skills,
-        age,gender}=user;
-  return (
+    const{firstName,lastName,photoURL,about,skills,age,gender}=user;
+       
+  return user && (
     <div className="card bg-base-300 w-96 shadow-sm">
     <figure>
       <img
