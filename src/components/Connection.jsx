@@ -30,7 +30,7 @@ const Connection = () => {
   }
 
   return (
-    <div className="flex justify-center items-center min-h-screen mt-5">
+    <div className="flex justify-center items-center min-h-screen mt-5 mb-10 pb-6">
       <div className="space-y-4 px-10 w-full max-w-4xl">
         <h1 className='text-center text-2xl font-bold'>Connections</h1>
         {error && <p className="text-red-600">{error}</p>}
@@ -39,7 +39,7 @@ const Connection = () => {
   
           return (
 
-            <div key={_id} className="card card-side bg-base-300 shadow-sm px-5 w-full">
+            <div key={_id} className="card card-side bg-base-300 shadow-sm px-5 w-full  ">
            
               <figure>
                 <img
