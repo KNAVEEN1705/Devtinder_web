@@ -32,11 +32,14 @@ useEffect(() => {
 }, []);
 
   return (
-    <>
-      <NavBar />
+    <div className="min-h-screen flex flex-col">
+    <NavBar />
+    <main className="flex-grow">
       <Outlet />
-      <Footer />
-    </>
+    </main>
+    <Footer />
+  </div>
+  
   );
 };
 
