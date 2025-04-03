@@ -36,7 +36,7 @@ const Requests = () => {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-[80vh] mt-4">
+    <div className="flex flex-col justify-center items-center min-h-[80vh] mt-4 mt-4">
 
       <div className="space-y-6 px-4 sm:px-10 w-full max-w-4xl">
         <h1 className="text-center text-2xl font-bold">Connection Requests</h1>
