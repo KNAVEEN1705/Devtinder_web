@@ -120,7 +120,7 @@ const EditProfile = ({ user }) => {
         </div>
 
         {/* Preview Section */}
-        <div className="flex justify-center w-full sm:w-auto mx-10">
+        <div className="flex justify-center w-full sm:w-1/3 mx-10 my-10">
           <UserCard user={{ firstName, lastName, age, gender, photoURL, about, skills: user.skills || [] }} />
         </div>
       </div>

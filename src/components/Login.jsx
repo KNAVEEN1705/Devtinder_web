@@ -45,15 +45,8 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen px-4">
+    <div className="flex justify-center items-center min-h-screen ">
       <div className="card bg-base-100 image-full w-full max-w-md shadow-xl p-5 md:p-4">
-        <figure>
-          <img
-            className="opacity-30"
-            src="https://cdn.pixabay.com/photo/2022/12/10/13/46/attack-7647136_1280.png"
-            alt="login"
-          />
-        </figure>
         <div className="card-body text-center">
           <h2 className="card-title font-bold text-2xl md:text-3xl mb-4">
             {isLoginForm ? "Login" : "Sign Up"}
